@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tampilan Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('wallpaper.jpg'); /* Ganti dengan URL gambar yang Anda inginkan */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            overflow: hidden;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.9); /* Warna putih dengan transparansi */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            transform: translateY(-50px);
+            opacity: 0;
+            animation: slideIn 0.5s forwards;
+        }
+        @keyframes slideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            border-color: #6a11cb;
+            outline: none;
+        }
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6a11cb;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .login-button:hover {
+            background-color: #5a0fb0;
+            transform: translateY(-2px);
+        }
+        .login-button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="login-button">Masuk</button>
+    </form>
+</div>
+
+</body>
+</html>
